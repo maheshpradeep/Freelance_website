@@ -1,8 +1,8 @@
 <?php
-$host = 'skillsurgedbserver.mysql.database.azure.com';
-$dbname = 'freelance_db';
-$user = 'freelance_user@skillsurgedbserver';  // Make sure the server name matches here
-$pass = 'skillsurge123!';
+$host = '';
+$dbname = '';
+$user = '';  // Make sure the server name matches here
+$pass = '';
 
 $conn = mysqli_connect($host, $user, $pass, $dbname);
 
