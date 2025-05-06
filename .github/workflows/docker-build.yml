@@ -28,6 +28,10 @@ jobs:
         push: true
         tags: maheshabekoon/freelance-app:latest
 
-    - name: Trigger Azure App Service webhook
-      run: |
-        curl -X POST "${{ secrets.AZURE_WEBHOOK_URL }}"
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Restart Azure App Service
+      run: az webapp restart --name freelance-web --resource-group freelance-rg
