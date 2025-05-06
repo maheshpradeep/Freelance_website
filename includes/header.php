@@ -1,11 +1,16 @@
 <?php
+// Start output buffering to prevent premature output
+ob_start();
+
+// Check if the session is already started, and start it if not
 if (session_status() == PHP_SESSION_NONE) {
   session_start();
 }
 
-// Add this line to safely define $page if it’s not already set
+// Define $page if not already set (to handle page-specific styles)
 if (!isset($page)) $page = '';
 
+// Get the current page name (for dynamic styles)
 $currentPage = basename($_SERVER['PHP_SELF']);
 ?>
 
