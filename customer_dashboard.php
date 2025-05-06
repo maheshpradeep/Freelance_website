@@ -1,5 +1,5 @@
 <?php
-
+include('includes/header.php');
 
 // Security check: only allow logged-in users
 if (!isset($_SESSION['user_id']) || $_SESSION['login_role'] !== 'customer') {
@@ -12,7 +12,7 @@ $user_id = $_SESSION['user_id'];
 $role = $_SESSION['login_role'];
 ?>
 
-<?php include('includes/header.php'); ?>
+
 
 <main>
   <section>
