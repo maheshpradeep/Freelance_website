@@ -11,6 +11,8 @@ include('includes/header.php');
     <p>Your go-to platform to hire or get hired for freelance services.</p>
   </section>
 
+
+  
   <!-- Slideshow Section -->
   <section class="slideshow">
     <h1>Featured Services</h1>
