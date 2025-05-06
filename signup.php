@@ -1,5 +1,6 @@
 <?php
 include('database.php');
+include('includes/header.php');
 
 $signupMessage = '';
 
@@ -32,7 +33,7 @@ if (mysqli_query($conn, $sql)) {
 
 ?>
 
-<?php include('includes/header.php'); ?>
+
 
 <main>
   <section class="signup-container">
