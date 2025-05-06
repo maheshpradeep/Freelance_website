@@ -2,15 +2,15 @@ name: Build and Push Docker Image
 
 on:
   push:
-    branches: [ main ]  # This triggers the workflow on push to main branch
+    branches: [ main ]
 
 jobs:
   build:
-    runs-on: ubuntu-latest  # Use Ubuntu runner
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3  # Step to clone your code
+      uses: actions/checkout@v3
 
     - name: Set up Docker Buildx
       uses: docker/setup-buildx-action@v3
@@ -27,3 +27,7 @@ jobs:
         context: .
         push: true
         tags: maheshabekoon/freelance-app:latest
+
+    - name: Trigger Azure App Service webhook
+      run: |
+        curl -X POST "${{ secrets.AZURE_WEBHOOK_URL }}"
