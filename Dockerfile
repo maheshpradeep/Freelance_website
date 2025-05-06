@@ -1,5 +1,8 @@
 FROM php:8.1-apache
 
+# Install mysqli extension
+RUN docker-php-ext-install mysqli
+
 # Copy your PHP files to Apache's default root
 COPY . /var/www/html/
 
