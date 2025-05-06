@@ -1,8 +1,10 @@
-FROM php:8.2-apache
+FROM php:8.1-apache
 
+# Copy your PHP files to Apache's default root
 COPY . /var/www/html/
 
-# Install mysqli safely (optional for now — you can remove if testing without DB)
-# RUN docker-php-ext-install mysqli
+# Open port 80
+EXPOSE 80
 
-# EXPOSE and CMD are handled by base image
+# Start Apache (this keeps the container running)
+CMD ["apache2-foreground"]
