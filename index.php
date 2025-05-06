@@ -12,7 +12,7 @@ include('includes/header.php');
   </section>
 
 
-  
+
   <!-- Slideshow Section -->
   <section class="slideshow">
     <h1>Featured Services</h1>
@@ -71,6 +71,8 @@ include('includes/header.php');
   <section class="call-to-action">
     <h2>Get Started Today</h2>
     <p>Whether you're a freelancer or a business, SkillSurge has something for you.</p>
+
+    <p>This is the test for the check update</p>
     <?php if (!isset($_SESSION['user_id'])): ?>
       <a href="signup.php" class="btn">Join Now</a>
     <?php endif; ?>
