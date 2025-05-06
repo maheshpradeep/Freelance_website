@@ -4,7 +4,7 @@ $dbname = 'freelance_db';
 $user = 'freelance_user@freelancedbserver';
 $pass = 'skillsurge123!';
 
-$conn = mysqli_connect($host, $user, $pass, $dbname);
+$conn = mysqli_connect($host, $dbname, $user, $pass);
 
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
