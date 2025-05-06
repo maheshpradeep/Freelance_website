@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';
-$user = 'root'; // default for XAMPP
-$pass = '';     // leave empty for XAMPP
+$host = 'db';  // Must match service name in docker-compose.yml
 $dbname = 'freelance_db';
+$user = 'freelance_user';
+$pass = 'freelance_pass';
 
 $conn = mysqli_connect($host, $user, $pass, $dbname);
 
