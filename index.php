@@ -76,6 +76,7 @@ include('includes/header.php');
     
     <p>This is the test for the check 2nd update</p>
     <p>This is the test for the check 3rd update</p>
+    <p>This is the test for the check 4th update</p>
     <?php if (!isset($_SESSION['user_id'])): ?>
       <a href="signup.php" class="btn">Join Now</a>
     <?php endif; ?>

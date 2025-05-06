@@ -1,11 +1,11 @@
 <?php
-session_start();
+include('includes/header.php');
 if (!isset($_SESSION['user_id'])) {
   header("Location: login.php");
   exit();
 }
 
-include('includes/header.php');
+
 ?>
 
 <main>

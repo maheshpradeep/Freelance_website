@@ -1,5 +1,5 @@
 <?php
-session_start();
+
 
 // Security check: only allow logged-in users
 if (!isset($_SESSION['user_id']) || $_SESSION['login_role'] !== 'customer') {

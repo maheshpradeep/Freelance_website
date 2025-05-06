@@ -1,6 +1,6 @@
 <?php
 include('database.php');
-session_start();
+include('includes/header.php');
 
 $loginMessage = '';
 
@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
 ?>
 
 
-<?php include('includes/header.php'); ?>
+
 
 <main>
   <section class="login-container">
