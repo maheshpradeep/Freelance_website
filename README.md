@@ -2,7 +2,7 @@
 
 **SkillSurge** is a role-based freelance web platform built to demonstrate real-world **DevOps** and **Web Development** practices.
 
-This project simulates a minimal freelance marketplace (login & signup completed) and includes full DevOps integration from local development to cloud deployment.
+🔗 **Live Project**: [https://freelance-web.azurewebsites.net/](https://freelance-web.azurewebsites.net/)
 
 ## ✅ Key Features (Completed)
 
@@ -34,4 +34,3 @@ PHP • HTML • CSS • JavaScript • MySQL • Docker • Azure • GitHub Ac
 ---
 
 > 🔧 *This is an active project focused on learning DevOps through practical implementation. Admin panel and service workflows are planned for the next phase.*
-
