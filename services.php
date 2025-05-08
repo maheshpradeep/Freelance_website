@@ -70,9 +70,9 @@ include('includes/header.php');
     <p>Connect with skilled freelancers who can help your business grow and succeed.</p>
     
     <?php if (!isset($_SESSION['user_id'])): ?>
-      <a href="contact.php" class="btn">Find Talent Today</a>
+      <a href="services.php" class="btn">Find Talent Today</a>
     <?php else: ?>
-      <a href="contact.php" class="btn">Get Started</a>
+      <a href="services.php" class="btn">Get Started</a>
     <?php endif; ?>
   </section>
 

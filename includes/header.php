@@ -35,6 +35,9 @@ $currentPage = basename($_SERVER['PHP_SELF']);
   <?php if ($page === 'services'): ?>
     <link rel="stylesheet" href="assets/css/service.css?v=<?= filemtime('assets/css/service.css') ?>">
   <?php endif; ?>
+  <?php if ($page === 'about'): ?>
+    <link rel="stylesheet" href="assets/css/about.css?v=<?= filemtime('assets/css/about.css') ?>">
+  <?php endif; ?>
   <script src="assets/js/main.js?v=<?= filemtime('assets/js/main.js') ?>"></script>
 </head>
 <body>
@@ -47,7 +50,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
         <ul class="main-nav">
           <li><a href="index.php">Home</a></li>
           <li><a href="services.php">Services</a></li>
-          <li><a href="about.php">About Us</a></li>
+          <li><a href="aboutus.php">About Us</a></li>
           <!-- Show Account page if logged in -->
           <?php if (isset($_SESSION['user_id'])): ?>
             <li><a href="account.php">Account</a></li>
