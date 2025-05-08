@@ -32,6 +32,9 @@ $currentPage = basename($_SERVER['PHP_SELF']);
   <?php if ($page === 'account'): ?>
     <link rel="stylesheet" href="assets/css/account.css?v=<?= filemtime('assets/css/account.css') ?>">
   <?php endif; ?>
+  <?php if ($page === 'services'): ?>
+    <link rel="stylesheet" href="assets/css/service.css?v=<?= filemtime('assets/css/service.css') ?>">
+  <?php endif; ?>
   <script src="assets/js/main.js?v=<?= filemtime('assets/js/main.js') ?>"></script>
 </head>
 <body>
