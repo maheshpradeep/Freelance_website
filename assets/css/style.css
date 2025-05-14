@@ -304,18 +304,77 @@ footer {
     background-color: var(--primary-color);
 }
 
+/* Mobile menu toggle button styling */
+.mobile-menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: white;
+  padding: 8px;
+}
+
+.mobile-menu-toggle:hover {
+  color: var(--primary-color);
+}
+
+/* Menu open state for body - prevents scrolling when menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
 /* Media query for responsiveness */
 @media (max-width: 768px) {
-    .signup-container,
-    .login-container {
-        flex-direction: column;
-        max-width: 400px;
-        height: auto;
+    /* Simplified mobile header */
+    .header-container {
+        flex-wrap: wrap;
+        position: relative;
     }
     
-    .signup-image,
-    .login-image {
-        height: 200px;
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    /* Hide navigation by default on mobile */
+    nav#main-navigation {
+        width: 100%;
+        order: 3;
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    /* Ensure navigation items stack properly */
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    nav ul li {
+        margin: 5px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    nav ul li a {
+        display: block;
+        padding: 10px;
+    }
+    
+    .main-nav, .auth-nav {
+        margin: 0;
+        padding: 0;
+    }
+    
+    /* Welcome text styling for mobile */
+    .welcome-text {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .user-role-icon {
+        margin: 5px auto;
+        display: inline-block;
     }
 }
 

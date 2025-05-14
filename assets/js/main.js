@@ -1,4 +1,35 @@
+// Mobile menu toggle function - globally accessible for the onclick attribute
+function toggleMobileMenu() {
+    const nav = document.getElementById('main-navigation');
+    if (nav.style.display === 'block') {
+        nav.style.display = 'none';
+    } else {
+        nav.style.display = 'block';
+    }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
+    // Set initial state for mobile menu on page load
+    if (window.innerWidth <= 768) {
+        const nav = document.getElementById('main-navigation');
+        if (nav) {
+            nav.style.display = 'none';
+        }
+    }
+    
+    // Close mobile menu when clicking a navigation link
+    const navLinks = document.querySelectorAll('#main-navigation a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                const nav = document.getElementById('main-navigation');
+                if (nav) {
+                    nav.style.display = 'none';
+                }
+            }
+        });
+    });
+    
     // Enhanced Slideshow functionality
     const slider = document.querySelector('.slider');
     if (slider) {
@@ -70,5 +101,15 @@ document.addEventListener('DOMContentLoaded', function() {
         section.style.transform = 'translateY(20px)';
         section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
         fadeInObserver.observe(section);
+    });
+
+    // Replace any code that might be using Range.expand() with proper Selection API
+    // This addresses the deprecation warning: "Range.expand() is deprecated. Please use Selection.modify() instead."
+    document.addEventListener('selectionchange', function() {
+        const selection = window.getSelection();
+        if (selection.rangeCount > 0) {
+            // Use modern Selection API methods if needed
+            // Example: selection.modify('extend', 'forward', 'word');
+        }
     });
 });

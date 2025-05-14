@@ -46,7 +46,13 @@ $currentPage = basename($_SERVER['PHP_SELF']);
       <div class="logo">
         <h1>SkillSurge</h1>
       </div>
-      <nav>
+      
+      <!-- Mobile menu toggle button -->
+      <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <nav id="main-navigation">
         <ul class="main-nav">
           <li><a href="index.php">Home</a></li>
           <li><a href="services.php">Services</a></li>
@@ -66,7 +72,7 @@ $currentPage = basename($_SERVER['PHP_SELF']);
             <?php endif; ?>
           <?php else: ?>
             <!-- Display username and role icon if logged in -->
-            <li style="margin-right: 10px;">
+            <li class="welcome-text-li">
               <span class="welcome-text">Welcome <?= $_SESSION['username']?>! 
                 <?php if ($_SESSION['login_role'] == 'customer'): ?>
                   <span class="user-role-icon role-customer" title="Customer">
@@ -91,5 +97,4 @@ $currentPage = basename($_SERVER['PHP_SELF']);
       </nav>
     </div>
   </header>
-</body>
-</html>
+  <!-- Content would go here -->
